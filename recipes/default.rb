@@ -1,8 +1,9 @@
-#
-# Cookbook Name:: pi_base
-# Recipe:: default
-#
-# Copyright 2014, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
+user "admin" do
+  supports :manage_home => true
+  comment "Admin User"
+  gid "admin"
+  home "/home/admin"
+  shell "/bin/bash"
+  password "admin"
+  action :create
+end
